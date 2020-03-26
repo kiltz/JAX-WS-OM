@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<schema targetNamespace="http://kiltz.de/api/v2"
+        xmlns:tns="http://kiltz.de/api/v2"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+
+
+   <complexType name="FaultInfo">
+      <sequence>
+         <element name="Code" type="int" />
+         <element name="Message" type="normalizedString" />
+      </sequence>
+   </complexType>
+
+   <element name="FaultInfo" type="tns:FaultInfo" />
+
+</schema>

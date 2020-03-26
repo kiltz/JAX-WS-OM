@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<schema targetNamespace="http://kiltz.de/api/v2"
+        xmlns:tns="http://kiltz.de/api/v2"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+
+
+   <simpleType name="UUID">
+      <annotation>
+         <documentation xml:lang="de">
+            Ein Universally Unique Identifier (UUID) nach RFC 4122.
+         </documentation>
+      </annotation>
+      <restriction base="token">
+         <pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+      </restriction>
+   </simpleType>
+
+</schema>

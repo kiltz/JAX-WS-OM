@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="KontaktService"
+             targetNamespace="http://kiltz.de/kontakt/v1"
+             xmlns:tns="http://kiltz.de/kontakt/v1"
+             xmlns:sns="http://kiltz.de/api/v2"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+
+  <types>
+    <schema targetNamespace="http://kiltz.de/kontakt/v1"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+
+      <import namespace="http://kiltz.de/api/v2" schemaLocation="../../api/v2/Types.xsd"/>
+      <include schemaLocation="./Kontakt.xsd"/>
+
+    </schema>
+  </types>
+  <message name="neu">
+    <part name="Auth" element="sns:AuthToken"/>
+    <part name="Body" element="tns:neu"/>
+  </message>
+  <message name="neuResponse">
+    <part name="Body" element="tns:neuResponse"/>
+  </message>
+  <message name="hole">
+    <part name="Auth" element="sns:AuthToken"/>
+    <part name="Body" element="tns:hole"/>
+  </message>
+  <message name="holeResponse">
+    <part name="Body" element="tns:holeResponse"/>
+  </message>
+  <message name="suche">
+    <part name="Auth" element="sns:AuthToken"/>
+    <part name="Body" element="tns:suche"/>
+  </message>
+  <message name="sucheResponse">
+    <part name="Body" element="tns:sucheResponse"/>
+  </message>
+
+  <message name="KontaktException">
+    <part name="FaultDetail" element="sns:FaultInfo"/>
+  </message>
+
+  <portType name="KontaktWS">
+    <operation name="neu">
+      <input message="tns:neu"/>
+      <output message="tns:neuResponse"/>
+      <fault message="tns:KontaktException" name="KontaktFault"/>
+    </operation>
+    <operation name="hole">
+      <input message="tns:hole"/>
+      <output message="tns:holeResponse"/>
+      <fault message="tns:KontaktException" name="KontaktFault"/>
+    </operation>
+    <operation name="suche">
+      <input message="tns:suche"/>
+      <output message="tns:sucheResponse"/>
+      <fault message="tns:KontaktException" name="KontaktFault"/>
+    </operation>
+  </portType>
+  <binding name="KontaktSoapBinding" type="tns:KontaktWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"
+                  style="document" />
+    <operation name="neu">
+      <soap:operation soapAction="neu"/>
+      <input>
+        <soap:header message="tns:neu" part="Auth" use="literal"/>
+        <soap:body parts="Body" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="KontaktFault">
+        <soap:fault name="KontaktFault"/>
+      </fault>
+    </operation>
+    <operation name="hole">
+      <soap:operation soapAction="hole"/>
+      <input>
+        <soap:header message="tns:hole" part="Auth" use="literal"/>
+        <soap:body parts="Body" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="KontaktFault">
+        <soap:fault name="KontaktFault"/>
+      </fault>
+    </operation>
+    <operation name="suche">
+      <soap:operation soapAction="suche"/>
+      <input>
+        <soap:header message="tns:suche" part="Auth" use="literal"/>
+        <soap:body parts="Body" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="KontaktFault">
+        <soap:fault name="KontaktFault"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="KontaktService">
+    <port name="KontaktPort" binding="tns:KontaktSoapBinding">
+      <soap:address location="http://localhost:9090/ws/Kontakt_1" />
+    </port>
+  </service>
+</definitions>

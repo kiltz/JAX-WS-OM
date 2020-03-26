@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<schema targetNamespace="http://kiltz.de/api/v2"
+        xmlns:tns="http://kiltz.de/api/v2"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+
+
+   <include schemaLocation="./UUID.xsd" />
+
+
+   <complexType name="AuthToken">
+      <sequence>
+         <element name="token" type="tns:UUID" />
+      </sequence>
+   </complexType>
+
+   <element name="AuthToken" type="tns:AuthToken" />
+
+</schema>
