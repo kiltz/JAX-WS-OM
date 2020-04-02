@@ -24,12 +24,12 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Suche_QNAME = new QName("http://kiltz.de/kontakt/v1", "suche");
-    private final static QName _Hole_QNAME = new QName("http://kiltz.de/kontakt/v1", "hole");
-    private final static QName _HoleResponse_QNAME = new QName("http://kiltz.de/kontakt/v1", "holeResponse");
-    private final static QName _Neu_QNAME = new QName("http://kiltz.de/kontakt/v1", "neu");
-    private final static QName _NeuResponse_QNAME = new QName("http://kiltz.de/kontakt/v1", "neuResponse");
-    private final static QName _SucheResponse_QNAME = new QName("http://kiltz.de/kontakt/v1", "sucheResponse");
+    private final static QName _Suche_QNAME = new QName("http://kiltz.de/kontakt/v1", "Suche");
+    private final static QName _Hole_QNAME = new QName("http://kiltz.de/kontakt/v1", "Hole");
+    private final static QName _HoleResponse_QNAME = new QName("http://kiltz.de/kontakt/v1", "HoleResponse");
+    private final static QName _Neu_QNAME = new QName("http://kiltz.de/kontakt/v1", "Neu");
+    private final static QName _NeuResponse_QNAME = new QName("http://kiltz.de/kontakt/v1", "NeuResponse");
+    private final static QName _SucheResponse_QNAME = new QName("http://kiltz.de/kontakt/v1", "SucheResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: de.kiltz.kontakt.v1
@@ -39,51 +39,51 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Hole }
+     * Create an instance of {@link HoleReq }
      * 
      */
-    public Hole createHole() {
-        return new Hole();
+    public HoleReq createHoleReq() {
+        return new HoleReq();
     }
 
     /**
-     * Create an instance of {@link HoleResponse }
+     * Create an instance of {@link SucheReq }
      * 
      */
-    public HoleResponse createHoleResponse() {
-        return new HoleResponse();
+    public SucheReq createSucheReq() {
+        return new SucheReq();
     }
 
     /**
-     * Create an instance of {@link Suche }
+     * Create an instance of {@link SucheResp }
      * 
      */
-    public Suche createSuche() {
-        return new Suche();
+    public SucheResp createSucheResp() {
+        return new SucheResp();
     }
 
     /**
-     * Create an instance of {@link NeuResponse }
+     * Create an instance of {@link HoleResp }
      * 
      */
-    public NeuResponse createNeuResponse() {
-        return new NeuResponse();
+    public HoleResp createHoleResp() {
+        return new HoleResp();
     }
 
     /**
-     * Create an instance of {@link SucheResponse }
+     * Create an instance of {@link NeuReq }
      * 
      */
-    public SucheResponse createSucheResponse() {
-        return new SucheResponse();
+    public NeuReq createNeuReq() {
+        return new NeuReq();
     }
 
     /**
-     * Create an instance of {@link Neu }
+     * Create an instance of {@link NeuResp }
      * 
      */
-    public Neu createNeu() {
-        return new Neu();
+    public NeuResp createNeuResp() {
+        return new NeuResp();
     }
 
     /**
@@ -95,57 +95,57 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Suche }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SucheReq }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://kiltz.de/kontakt/v1", name = "suche")
-    public JAXBElement<Suche> createSuche(Suche value) {
-        return new JAXBElement<Suche>(_Suche_QNAME, Suche.class, null, value);
+    @XmlElementDecl(namespace = "http://kiltz.de/kontakt/v1", name = "Suche")
+    public JAXBElement<SucheReq> createSuche(SucheReq value) {
+        return new JAXBElement<SucheReq>(_Suche_QNAME, SucheReq.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Hole }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link HoleReq }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://kiltz.de/kontakt/v1", name = "hole")
-    public JAXBElement<Hole> createHole(Hole value) {
-        return new JAXBElement<Hole>(_Hole_QNAME, Hole.class, null, value);
+    @XmlElementDecl(namespace = "http://kiltz.de/kontakt/v1", name = "Hole")
+    public JAXBElement<HoleReq> createHole(HoleReq value) {
+        return new JAXBElement<HoleReq>(_Hole_QNAME, HoleReq.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link HoleResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link HoleResp }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://kiltz.de/kontakt/v1", name = "holeResponse")
-    public JAXBElement<HoleResponse> createHoleResponse(HoleResponse value) {
-        return new JAXBElement<HoleResponse>(_HoleResponse_QNAME, HoleResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://kiltz.de/kontakt/v1", name = "HoleResponse")
+    public JAXBElement<HoleResp> createHoleResponse(HoleResp value) {
+        return new JAXBElement<HoleResp>(_HoleResponse_QNAME, HoleResp.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Neu }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NeuReq }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://kiltz.de/kontakt/v1", name = "neu")
-    public JAXBElement<Neu> createNeu(Neu value) {
-        return new JAXBElement<Neu>(_Neu_QNAME, Neu.class, null, value);
+    @XmlElementDecl(namespace = "http://kiltz.de/kontakt/v1", name = "Neu")
+    public JAXBElement<NeuReq> createNeu(NeuReq value) {
+        return new JAXBElement<NeuReq>(_Neu_QNAME, NeuReq.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NeuResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NeuResp }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://kiltz.de/kontakt/v1", name = "neuResponse")
-    public JAXBElement<NeuResponse> createNeuResponse(NeuResponse value) {
-        return new JAXBElement<NeuResponse>(_NeuResponse_QNAME, NeuResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://kiltz.de/kontakt/v1", name = "NeuResponse")
+    public JAXBElement<NeuResp> createNeuResponse(NeuResp value) {
+        return new JAXBElement<NeuResp>(_NeuResponse_QNAME, NeuResp.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SucheResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SucheResp }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://kiltz.de/kontakt/v1", name = "sucheResponse")
-    public JAXBElement<SucheResponse> createSucheResponse(SucheResponse value) {
-        return new JAXBElement<SucheResponse>(_SucheResponse_QNAME, SucheResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://kiltz.de/kontakt/v1", name = "SucheResponse")
+    public JAXBElement<SucheResp> createSucheResponse(SucheResp value) {
+        return new JAXBElement<SucheResp>(_SucheResponse_QNAME, SucheResp.class, null, value);
     }
 
 }

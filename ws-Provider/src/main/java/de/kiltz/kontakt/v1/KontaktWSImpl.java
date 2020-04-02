@@ -12,17 +12,17 @@ public class KontaktWSImpl implements KontaktWS {
 
 
     @Override
-    public NeuResponse neu(AuthToken auth, Neu body) throws KontaktException {
+    public NeuResp neu(AuthToken auth, NeuReq body) throws KontaktException {
         return null;
     }
 
     @Override
-    public HoleResponse hole(AuthToken auth, Hole body) throws KontaktException {
+    public HoleResp hole(AuthToken auth, HoleReq body) throws KontaktException {
         return null;
     }
 
     @Override
-    public SucheResponse suche(AuthToken auth, Suche body) throws KontaktException {
+    public SucheResp suche(AuthToken auth, SucheReq body) throws KontaktException {
         return null;
     }
 }

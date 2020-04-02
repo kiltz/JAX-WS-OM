@@ -5,21 +5,21 @@
            xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0"
            targetNamespace="http://kiltz.de/kontakt/v1">
 
-  <xs:element name="hole" type="tns:hole" />
+  <xs:element name="Hole" type="tns:holeReq" />
 
-  <xs:element name="holeResponse" type="tns:holeResponse" />
+  <xs:element name="HoleResponse" type="tns:holeResp" />
 
-  <xs:element name="neu" type="tns:neu" />
+  <xs:element name="Neu" type="tns:neuReq" />
 
-  <xs:element name="neuResponse" type="tns:neuResponse" />
+  <xs:element name="NeuResponse" type="tns:neuResp" />
 
-  <xs:element name="suche" type="tns:suche" />
+  <xs:element name="Suche" type="tns:sucheReq" />
 
-  <xs:element name="sucheResponse" type="tns:sucheResponse" />
+  <xs:element name="SucheResponse" type="tns:sucheResp" />
 
-  <xs:complexType name="sucheResponse">
+  <xs:complexType name="sucheResp">
     <xs:sequence>
-      <xs:element name="return" type="tns:kontakt" minOccurs="0"
+      <xs:element name="kontaktListe" type="tns:kontakt" minOccurs="0"
                   maxOccurs="unbounded" />
     </xs:sequence>
   </xs:complexType>
@@ -36,32 +36,32 @@
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="neuResponse">
+  <xs:complexType name="neuResp">
     <xs:sequence>
-      <xs:element name="return" type="tns:kontakt" minOccurs="0" />
+      <xs:element name="kontakt" type="tns:kontakt" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="holeResponse">
+  <xs:complexType name="holeResp">
     <xs:sequence>
-      <xs:element name="return" type="tns:kontakt" minOccurs="0" />
+      <xs:element name="kontakt" type="tns:kontakt" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="suche">
+  <xs:complexType name="sucheReq">
     <xs:sequence>
       <xs:element name="such" type="xs:string" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="neu">
+  <xs:complexType name="neuReq">
     <xs:sequence>
       <xs:element name="kontakt" type="tns:kontakt"
                   minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="hole">
+  <xs:complexType name="holeReq">
     <xs:sequence>
       <xs:element name="id" type="xs:long" minOccurs="0" />
     </xs:sequence>

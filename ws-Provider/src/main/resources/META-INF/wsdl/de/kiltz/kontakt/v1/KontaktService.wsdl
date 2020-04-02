@@ -6,7 +6,7 @@
              xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
              xmlns="http://schemas.xmlsoap.org/wsdl/">
 
-
+  <documentation>WSDL für den Kontaktservice</documentation>
   <types>
     <schema targetNamespace="http://kiltz.de/kontakt/v1"
             xmlns="http://www.w3.org/2001/XMLSchema"
@@ -19,24 +19,24 @@
   </types>
   <message name="neu">
     <part name="Auth" element="sns:AuthToken"/>
-    <part name="Body" element="tns:neu"/>
+    <part name="Body" element="tns:Neu"/>
   </message>
   <message name="neuResponse">
-    <part name="Body" element="tns:neuResponse"/>
+    <part name="Body" element="tns:NeuResponse"/>
   </message>
   <message name="hole">
     <part name="Auth" element="sns:AuthToken"/>
-    <part name="Body" element="tns:hole"/>
+    <part name="Body" element="tns:Hole"/>
   </message>
   <message name="holeResponse">
-    <part name="Body" element="tns:holeResponse"/>
+    <part name="Body" element="tns:HoleResponse"/>
   </message>
   <message name="suche">
     <part name="Auth" element="sns:AuthToken"/>
-    <part name="Body" element="tns:suche"/>
+    <part name="Body" element="tns:Suche"/>
   </message>
   <message name="sucheResponse">
-    <part name="Body" element="tns:sucheResponse"/>
+    <part name="Body" element="tns:SucheResponse"/>
   </message>
 
   <message name="KontaktException">

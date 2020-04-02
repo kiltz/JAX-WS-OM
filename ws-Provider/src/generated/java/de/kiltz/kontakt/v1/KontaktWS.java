@@ -30,16 +30,16 @@ public interface KontaktWS {
      * @param auth
      * @param body
      * @return
-     *     returns de.kiltz.kontakt.v1.NeuResponse
+     *     returns de.kiltz.kontakt.v1.NeuResp
      * @throws KontaktException
      */
     @WebMethod(action = "neu")
-    @WebResult(name = "neuResponse", targetNamespace = "http://kiltz.de/kontakt/v1", partName = "Body")
-    public NeuResponse neu(
+    @WebResult(name = "NeuResponse", targetNamespace = "http://kiltz.de/kontakt/v1", partName = "Body")
+    public NeuResp neu(
         @WebParam(name = "AuthToken", targetNamespace = "http://kiltz.de/api/v2", header = true, partName = "Auth")
         AuthToken auth,
-        @WebParam(name = "neu", targetNamespace = "http://kiltz.de/kontakt/v1", partName = "Body")
-        Neu body)
+        @WebParam(name = "Neu", targetNamespace = "http://kiltz.de/kontakt/v1", partName = "Body")
+        NeuReq body)
         throws KontaktException
     ;
 
@@ -48,16 +48,16 @@ public interface KontaktWS {
      * @param auth
      * @param body
      * @return
-     *     returns de.kiltz.kontakt.v1.HoleResponse
+     *     returns de.kiltz.kontakt.v1.HoleResp
      * @throws KontaktException
      */
     @WebMethod(action = "hole")
-    @WebResult(name = "holeResponse", targetNamespace = "http://kiltz.de/kontakt/v1", partName = "Body")
-    public HoleResponse hole(
+    @WebResult(name = "HoleResponse", targetNamespace = "http://kiltz.de/kontakt/v1", partName = "Body")
+    public HoleResp hole(
         @WebParam(name = "AuthToken", targetNamespace = "http://kiltz.de/api/v2", header = true, partName = "Auth")
         AuthToken auth,
-        @WebParam(name = "hole", targetNamespace = "http://kiltz.de/kontakt/v1", partName = "Body")
-        Hole body)
+        @WebParam(name = "Hole", targetNamespace = "http://kiltz.de/kontakt/v1", partName = "Body")
+        HoleReq body)
         throws KontaktException
     ;
 
@@ -66,16 +66,16 @@ public interface KontaktWS {
      * @param auth
      * @param body
      * @return
-     *     returns de.kiltz.kontakt.v1.SucheResponse
+     *     returns de.kiltz.kontakt.v1.SucheResp
      * @throws KontaktException
      */
     @WebMethod(action = "suche")
-    @WebResult(name = "sucheResponse", targetNamespace = "http://kiltz.de/kontakt/v1", partName = "Body")
-    public SucheResponse suche(
+    @WebResult(name = "SucheResponse", targetNamespace = "http://kiltz.de/kontakt/v1", partName = "Body")
+    public SucheResp suche(
         @WebParam(name = "AuthToken", targetNamespace = "http://kiltz.de/api/v2", header = true, partName = "Auth")
         AuthToken auth,
-        @WebParam(name = "suche", targetNamespace = "http://kiltz.de/kontakt/v1", partName = "Body")
-        Suche body)
+        @WebParam(name = "Suche", targetNamespace = "http://kiltz.de/kontakt/v1", partName = "Body")
+        SucheReq body)
         throws KontaktException
     ;
 
